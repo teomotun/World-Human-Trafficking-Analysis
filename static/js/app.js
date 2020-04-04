@@ -1,7 +1,7 @@
 function makeResponsive() {
 	var svgArea = d3.select("body").select("svg");
 
-	if (!svgArea.empty()) {
+	if (svgArea) {
 		svgArea.remove();
 	}
 
@@ -21,8 +21,7 @@ function makeResponsive() {
 	var svg = d3.select('#scatter')
 		.classed('chart', true)
 		.append('svg')
-		.attr('width', svgWidth)
-		.attr('height', svgHeight)
+		.attr("viewBox", `0 0 1000 600`)
 
 	var chartGroup = svg.append('g')
 		.attr('transform', `translate(${margin.l},${margin.t})`)
@@ -408,4 +407,4 @@ makeResponsive();
 
 // Event listener for window resize.
 // When the browser window is resized, makeResponsive() is called.
-d3.select(window).on("resize", makeResponsive);
+//d3.select(window).on("resize", makeResponsive);
