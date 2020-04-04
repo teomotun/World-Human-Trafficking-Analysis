@@ -1,9 +1,9 @@
 function makeResponsive() {
-	var svgArea = d3.select("body").select("svg");
+	//var svgArea = d3.select("body").select("svg");
 
-	if (svgArea) {
-		svgArea.remove();
-	}
+	// if (svgArea) {
+	// 	svgArea.remove();
+	// }
 
 	var svgWidth = window.innerWidth / 1.05,
 		svgHeight = window.innerHeight / 1.2;
@@ -21,7 +21,7 @@ function makeResponsive() {
 	var svg = d3.select('#scatter')
 		.classed('chart', true)
 		.append('svg')
-		.attr("viewBox", `0 0 750 600`)
+		.attr("viewBox", `0 0 1000 700`)
 
 	var chartGroup = svg.append('g')
 		.attr('transform', `translate(${margin.l},${margin.t})`)
@@ -37,7 +37,7 @@ function makeResponsive() {
 		data.forEach(d => {
 			d['Human Trafficking Events'] = +d['Human Trafficking Events'];
 			d['Battles Fought'] = +d['Battles Fought'];
-			d['Population'] = +d['Global Population'];
+			d['Population'] = +d['Population'];
 			d['Asylum Seekers'] = +d['Asylum Seekers'];
 			d['Aids Related Death'] = +d['Aids Related Death'];
 			d['Life Expectancy'] = +d['Life Expectancy'];
