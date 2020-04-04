@@ -21,7 +21,7 @@ function makeResponsive() {
 	var svg = d3.select('#scatter')
 		.classed('chart', true)
 		.append('svg')
-		.attr("viewBox", `0 0 1000 600`)
+		.attr("viewBox", `0 0 750 600`)
 
 	var chartGroup = svg.append('g')
 		.attr('transform', `translate(${margin.l},${margin.t})`)
